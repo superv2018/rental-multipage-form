@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail View</title>
+</head>
+<body>
+    
+    <h1>This is the detail view</h1>
+    <h3>From landlord</h3>
+    <p>Landlord: {{property.created_by}}</p>
+    <p>address: {{property.landlord.address}}</p>
+    
+    <h3>From Rental property</h3>
+    <ul>
+    <li>Title: {{property.title}}</li>
+    <li>created at: {{property.created_at}}</li>
+    <li>Type of property: {{property.type_of_property_listing}}</li>
+    <li>Street: {{property.street}}</li>
+    <li>Borough: {{property.borough}}</li>
+    <img src="{{property.image.url}}" height="200" alt=""/>
+    </ul>
+  
+    <ul>
+    <li> insurance : {{contract.insurance_required}}</li>
+    <li> other terms: {{contract.other_terms}}</li>
+    </ul>
+    
+
+</body>
+</html>

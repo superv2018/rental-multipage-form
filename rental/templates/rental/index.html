@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to our homepage</h1>
+    {% if rentalproperty_list %}
+    <ul>
+    {% for propertys in rentalproperty_list %}    
+    <a href="/rental/{{ propertys.id }}/"><li>{{propertys.title}} <a href="{% url 'delete' propertys.id %}">delete</a></li></a>
+    
+    {% endfor %}
+    </ul>
+    {%else %}
+    <p>No rental title available</p>
+    {% endif %}
+
+    <h1>To Rental property</h1>
+    <a href="/rental/{{propertys.pk}}">Create new rental</a>
+
+    
+</body>
+</html>
