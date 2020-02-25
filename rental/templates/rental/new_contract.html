@@ -9,7 +9,7 @@
     <H1>New rental</H1>
     <form method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ contract_form.as_p }}
         <input type="submit" value="submit">
     </form>
 </body>

@@ -1,6 +1,6 @@
 from django.urls import path
-from django.conf.urls.static import static
-from django.conf import settings
+
+
 
 from . import views
 from .forms import NewRentalPropertyForm, NewContractForm
@@ -12,4 +12,4 @@ urlpatterns = [
     #path('new_contract/', views.CreateContractView.as_view(), name='new_contract'),
     path('update/<int:pk>', views.UpdateView.as_view(), name='update'),
     path('delete/<int:pk>', views.DeleteView.as_view(), name='delete'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 

@@ -54,7 +54,9 @@ def new_rental(request, pk):
             print ("all validation passed")
             rentalproperty = rental_form.save()
             contract_form.cleaned_data["rentalproperty"] = rentalproperty
-            #contract.rentalproperty = rentalproperty
+            print(contract_form)
+            contract = contract_form.save(commit=False)
+            contract.rentalproperty = rentalproperty
             contract = contract_form.save()
             return HttpResponseRedirect(reverse("home"))
         else:

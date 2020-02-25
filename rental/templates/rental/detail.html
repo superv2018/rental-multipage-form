@@ -15,16 +15,19 @@
     <h3>From Rental property</h3>
     <ul>
     <li>Title: {{property.title}}</li>
+    <img src="{{property.image.url}}" height="200" alt=""/>
     <li>created at: {{property.created_at}}</li>
     <li>Type of property: {{property.type_of_property_listing}}</li>
     <li>Street: {{property.street}}</li>
     <li>Borough: {{property.borough}}</li>
-    <img src="{{property.image.url}}" height="200" alt=""/>
+    
     </ul>
   
     <ul>
-    <li> insurance : {{contract.insurance_required}}</li>
-    <li> other terms: {{contract.other_terms}}</li>
+    {% for cont in rentalproperty.contracts.all %}
+    <li> insurance : {{cont.insurance_required}}</li>
+    <li> other terms: {{cont.other_terms}}</li>
+    {% endfor %}
     </ul>
     
 

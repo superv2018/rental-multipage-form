@@ -15,4 +15,4 @@ class NewRentalPropertyForm(forms.ModelForm):
 class NewContractForm(forms.ModelForm):
     class Meta:
         model = Contract
-        fields = ['rentalproperty','insurance_required', 'other_terms']
+        fields = ['insurance_required', 'other_terms']
