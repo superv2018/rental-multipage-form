@@ -6,11 +6,11 @@
     <title>Delete</title>
 </head>
 <body>
-    <h1>Delete {{rentalproperty.created_by}}?</h1>
+    <h1>Delete?</h1>
     <form method="POST">
         {% csrf_token %}
         <input type="submit" value="Delete">
-        <a href="{% url 'home' %}">Cancel</a>
+        <a href="{% url 'rental:home' %}">Cancel</a>
     </form>
 </body>
 </html>

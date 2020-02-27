@@ -5,6 +5,7 @@ from django.urls import path
 from . import views
 from .forms import NewRentalPropertyForm, NewContractForm
 
+app_name = 'rental'
 urlpatterns = [
     path('', views.HomeView.as_view(), name="home" ),
     path('<int:pk>/',views.DetailView.as_view(), name='detail'),
