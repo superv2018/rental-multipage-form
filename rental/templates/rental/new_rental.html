@@ -9,7 +9,7 @@
     </script>
 </head>
 <body>
-    <H1>New rental</H1>
+  <H1>New rental</H1>
     {% if rental_form.errors %}
     {% for field in rental_form %}
         {% for error in field.errors %}
@@ -26,9 +26,10 @@
     {% endif %}
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ rental_form.as_p }}
-        {{ contract_form.as_p }}
+        {{ form.as_p }}
+        
         <input type="submit" value="submit">
+        <a href="/rental/new_contract/1">Next</a>
        
     </form>
     
